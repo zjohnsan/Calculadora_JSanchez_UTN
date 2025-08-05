@@ -1,4 +1,4 @@
-// index.mjs
+
 import { Calculadora } from './calculadora.mjs';
 import { mostrarMenu, pedirNumeros } from './menu.mjs';
 
