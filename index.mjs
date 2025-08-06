@@ -12,7 +12,7 @@ while (salir) {
 
     if (opcion === "0") {
       console.log("saliendo...")
-      salir = false;
+      salir = false
       break;
     }
 
@@ -40,7 +40,7 @@ while (salir) {
         break;
       default:
         console.log("Opción inválida")
-        continue;
+        continue
     }
 
     console.log(`Resultado: ${resultado}`)
