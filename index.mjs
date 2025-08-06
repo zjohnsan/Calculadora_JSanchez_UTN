@@ -1,50 +1,50 @@
 
-import { Calculadora } from './calculadora.mjs';
-import { mostrarMenu, pedirNumeros } from './menu.mjs';
+import { Calculadora } from './calculadora.mjs'
+import { mostrarMenu, pedirNumeros } from './menu.mjs'
 
-const calc = new Calculadora();
+const calc = new Calculadora()
 
-let salir = true;
+let salir = true
 
 while (salir) {
  
-    const opcion = await mostrarMenu();
+    const opcion = await mostrarMenu()
 
     if (opcion === "0") {
-      console.log("saliendo...");
+      console.log("saliendo...")
       salir = false;
       break;
     }
 
-    const [a, b] = await pedirNumeros();
-    let resultado;
+    const [a, b] = await pedirNumeros()
+    let resultado
 
     switch (opcion) {
       case "1":
-        resultado = calc.sumar(a, b);
+        resultado = calc.sumar(a, b)
         break;
       case "2":
-        resultado = calc.restar(a, b);
+        resultado = calc.restar(a, b)
         break;
       case "3":
-        resultado = calc.multiplicar(a, b);
+        resultado = calc.multiplicar(a, b)
         break;
       case "4":
-        resultado = calc.dividir(a, b);
+        resultado = calc.dividir(a, b)
         break;
       case "5":
-        resultado = calc.resto(a, b);
+        resultado = calc.resto(a, b)
         break;
       case "6":
-        resultado = calc.potencia(a, b);
+        resultado = calc.potencia(a, b)
         break;
       default:
-        console.log("Opción inválida");
+        console.log("Opción inválida")
         continue;
     }
 
-    console.log(`Resultado: ${resultado}`);
-    await input("Presioná ENTER para continuar...");
+    console.log(`Resultado: ${resultado}`)
+    await input("Presioná ENTER para continuar...")
   
 }
 
